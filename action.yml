@@ -15,7 +15,7 @@ runs:
 
     - name: Instalar dependencias
       run: |
-        pip install -ropenai python-docx gitpython
+        pip install -r openai python-docx gitpython
       shell: bash
 
     - name: Ejecutar generador

@@ -15,7 +15,7 @@ runs:
 
     - name: Instalar dependencias
       run: |
-        pip install -r docgen/requirements.txt
+        pip install -ropenai python-docx gitpython
       shell: bash
 
     - name: Ejecutar generador

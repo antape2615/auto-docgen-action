@@ -1,0 +1,26 @@
+name: "Auto DocGen LLM"
+description: "Genera documentación con un LLM y actualiza un .docx"
+inputs:
+  openai_key:
+    required: true
+    description: "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"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Instalar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Instalar dependencias
+      run: |
+        pip install -r requirements.txt
+      shell: bash
+
+    - name: Ejecutar generador
+      env:
+        OPENAI_API_KEY: ${{ inputs.openai_key }}
+      run: |
+        python main.py
+      shell: bash

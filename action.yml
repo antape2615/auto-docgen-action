@@ -3,7 +3,7 @@ description: "Genera documentación con un LLM y actualiza un .docx"
 inputs:
   openai_key:
     required: true
-    description: "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"
+    description: "Tu clave de OpenAI (API KEY)"
 
 runs:
   using: "composite"

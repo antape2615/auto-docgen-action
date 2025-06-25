@@ -15,7 +15,7 @@ runs:
 
     - name: Instalar dependencias
       run: |
-        pip install -r requirements.txt
+        pip install -r docgen/requirements.txt
       shell: bash
 
     - name: Ejecutar generador
